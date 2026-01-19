@@ -50,7 +50,7 @@ const Hero = () => {
                 transition={{ delay: 0.2 }}
                 className="text-5xl md:text-6xl font-bold tracking-tighter text-black dark:text-white mb-4"
             >
-              Hi, I'm Kurt Tendero
+              Hi! I'm Kurt Tendero
             </motion.h1>
             
             <motion.p 
