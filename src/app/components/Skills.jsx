@@ -12,7 +12,7 @@ const skills = [
 const Skills = () => {
   return (
     // FIXED: Added id="skills" so the Navbar link works
-    <section id="skills" className="py-12 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section id="skills" className="py-12 bg-gray-50">
       
       <div className="max-w-4xl mx-auto px-6">
         
@@ -20,9 +20,9 @@ const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl font-bold tracking-tight text-center mb-8 text-black dark:text-white flex justify-center items-center gap-3"
+          className="text-2xl font-bold tracking-tight text-center mb-8 text-black flex justify-center items-center gap-3"
         >
-          <FaCode className="text-gray-900 dark:text-white" />
+          <FaCode className="text-gray-900" />
           Tech Stack
         </motion.h2>
 
@@ -34,9 +34,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-black p-4 rounded-lg border border-gray-200 dark:border-gray-800"
+              className="bg-white p-4 rounded-lg border border-gray-200"
             >
-              <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-base font-semibold text-gray-900 mb-3">
                 {skillGroup.category}
               </h3>
               
@@ -44,7 +44,7 @@ const Skills = () => {
                 {skillGroup.items.map((item, idx) => (
                   <span 
                     key={idx} 
-                    className="px-2 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded border border-gray-200 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700"
+                    className="px-2 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded border border-gray-200"
                   >
                     {item}
                   </span>

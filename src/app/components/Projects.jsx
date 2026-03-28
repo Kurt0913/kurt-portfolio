@@ -25,14 +25,14 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-12 bg-white dark:bg-black transition-colors duration-300">
+    <section id="projects" className="py-12 bg-white">
       <div className="max-w-4xl mx-auto px-6">
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl font-bold tracking-tight text-black dark:text-white mb-6 flex items-center gap-3"
+          className="text-2xl font-bold tracking-tight text-black mb-6 flex items-center gap-3"
         >
           <FaFolderOpen className="text-gray-500" /> {/* The Icon */}
           Featured Projects
@@ -47,19 +47,19 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               // Card Styling
-              className="group relative border border-gray-200 dark:border-gray-800 rounded-lg p-4 hover:border-gray-400 dark:hover:border-gray-600 transition-colors bg-white dark:bg-gray-900"
+              className="group relative border border-gray-200 rounded-lg p-4 hover:border-gray-400 transition-colors bg-white"
             >
               {project.featured && (
-                <div className="absolute top-3 right-3 px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded">
+                <div className="absolute top-3 right-3 px-2 py-1 bg-gray-200 text-gray-700 text-xs font-semibold rounded">
                   ⭐ Featured
                 </div>
               )}
 
-              <h3 className="text-base font-semibold text-black dark:text-white mb-1 pr-20">
+              <h3 className="text-base font-semibold text-black mb-1 pr-20">
                 {project.title}
               </h3>
 
-              <p className="text-gray-600 dark:text-gray-400 mb-3 text-xs leading-relaxed">
+              <p className="text-gray-600 mb-3 text-xs leading-relaxed">
                 {project.description}
               </p>
 
@@ -68,7 +68,7 @@ const Projects = () => {
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+                    className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-700"
                   >
                     {tech}
                   </span>
@@ -77,10 +77,10 @@ const Projects = () => {
 
               <div className="flex gap-3 text-xs">
                 {/* Links: Monochrome Underline Style */}
-                <Link href={project.github} className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white underline underline-offset-2 transition-colors">
+                <Link href={project.github} className="text-gray-600 hover:text-black underline underline-offset-2 transition-colors">
                   GitHub ↗
                 </Link>
-                <Link href={project.link} className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white underline underline-offset-2 transition-colors">
+                <Link href={project.link} className="text-gray-600 hover:text-black underline underline-offset-2 transition-colors">
                   Live ↗
                 </Link>
               </div>

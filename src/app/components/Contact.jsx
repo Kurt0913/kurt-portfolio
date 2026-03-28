@@ -6,7 +6,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 const Contact = () => {
 
   return (
-    <section id="contact" className="py-12 bg-black dark:bg-gray-950 transition-colors duration-300">
+    <section id="contact" className="py-12 bg-black">
       <div className="max-w-4xl mx-auto px-6">
         
         <motion.h2
@@ -19,7 +19,7 @@ const Contact = () => {
           Get In Touch
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           
           {/* Email Card */}
           <a
