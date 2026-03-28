@@ -49,7 +49,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800"
+              className="p-4 bg-gray-50 rounded-xl border border-gray-200"
             >
               <FaGraduationCap className="text-xl text-gray-700 mb-2" />
               <h3 className="font-bold text-black text-sm">FEU Institute of Technology</h3>
@@ -63,7 +63,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800"
+              className="p-4 bg-gray-50 rounded-xl border border-gray-200"
             >
               <FaMarker className="text-xl text-gray-700 mb-2" />
               <h3 className="font-bold text-black text-sm">Metro Manila</h3>
@@ -77,11 +77,11 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800"
+              className="p-4 bg-gray-50 rounded-xl border border-gray-200"
             >
               <FaLaptopCode className="text-xl text-gray-700 mb-2" />
               <h3 className="font-bold text-black text-sm">Current Focus</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
+              <p className="text-xs text-gray-600">
                 Mastering <span className="font-medium text-black">Next.js</span> and building scalable web applications.
               </p>
             </motion.div>

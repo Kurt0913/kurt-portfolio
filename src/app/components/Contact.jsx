@@ -6,16 +6,16 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 const Contact = () => {
 
   return (
-    <section id="contact" className="py-12 bg-black">
+    <section id="contact" className="py-12 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl font-bold tracking-tight text-white mb-8 flex items-center gap-3 justify-center"
+          className="text-2xl font-bold tracking-tight text-black mb-8 flex items-center gap-3 justify-center"
         >
-          <FaEnvelope className="text-white" />
+          <FaEnvelope className="text-black" />
           Get In Touch
         </motion.h2>
 
@@ -24,11 +24,11 @@ const Contact = () => {
           {/* Email Card */}
           <a
             href="mailto:kurttendero@gmail.com"
-            className="p-4 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 transition text-center cursor-pointer"
+            className="p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-gray-400 transition text-center cursor-pointer"
           >
-            <FaEnvelope className="text-2xl text-white mb-2 mx-auto" />
-            <h3 className="text-base font-semibold text-white mb-1">Email</h3>
-            <p className="text-gray-400 text-xs">kurttendero@gmail.com</p>
+            <FaEnvelope className="text-2xl text-black mb-2 mx-auto" />
+            <h3 className="text-base font-semibold text-black mb-1">Email</h3>
+            <p className="text-gray-600 text-xs">kurttendero@gmail.com</p>
           </a>
 
           {/* GitHub Card */}
@@ -36,11 +36,11 @@ const Contact = () => {
             href="https://github.com/Kurt0913"
             target="_blank"
             rel="noreferrer"
-            className="p-4 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 transition text-center cursor-pointer"
+            className="p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-gray-400 transition text-center cursor-pointer"
           >
-            <FaGithub className="text-2xl text-white mb-2 mx-auto" />
-            <h3 className="text-base font-semibold text-white mb-1">GitHub</h3>
-            <p className="text-gray-400 text-xs">Check my code</p>
+            <FaGithub className="text-2xl text-black mb-2 mx-auto" />
+            <h3 className="text-base font-semibold text-black mb-1">GitHub</h3>
+            <p className="text-gray-600 text-xs">Check my code</p>
           </a>
 
           {/* LinkedIn Card */}
@@ -48,11 +48,11 @@ const Contact = () => {
             href="https://linkedin.com/in/kurt-tendero"
             target="_blank"
             rel="noreferrer"
-            className="p-4 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 transition text-center cursor-pointer"
+            className="p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-gray-400 transition text-center cursor-pointer"
           >
-            <FaLinkedin className="text-2xl text-white mb-2 mx-auto" />
-            <h3 className="text-base font-semibold text-white mb-1">LinkedIn</h3>
-            <p className="text-gray-400 text-xs">Connect with me</p>
+            <FaLinkedin className="text-2xl text-black mb-2 mx-auto" />
+            <h3 className="text-base font-semibold text-black mb-1">LinkedIn</h3>
+            <p className="text-gray-600 text-xs">Connect with me</p>
           </a>
 
         </div>
