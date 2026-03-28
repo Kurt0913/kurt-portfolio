@@ -22,29 +22,29 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black dark:bg-gray-950 transition-colors duration-300">
+    <section id="contact" className="py-12 bg-black dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6">
         
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold tracking-tight text-white mb-12 flex items-center gap-3 justify-center"
+          className="text-2xl font-bold tracking-tight text-white mb-8 flex items-center gap-3 justify-center"
         >
           <FaEnvelope className="text-white" />
           Get In Touch
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           
           {/* Email Card */}
           <a
             href="mailto:kurttendero@gmail.com"
-            className="p-6 bg-gray-800 border border-gray-700 rounded-2xl hover:border-gray-600 transition text-center cursor-pointer"
+            className="p-4 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 transition text-center cursor-pointer"
           >
-            <FaEnvelope className="text-3xl text-white mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-            <p className="text-gray-400 text-sm">kurttendero@gmail.com</p>
+            <FaEnvelope className="text-2xl text-white mb-2 mx-auto" />
+            <h3 className="text-base font-semibold text-white mb-1">Email</h3>
+            <p className="text-gray-400 text-xs">kurttendero@gmail.com</p>
           </a>
 
           {/* GitHub Card */}
@@ -52,11 +52,11 @@ const Contact = () => {
             href="https://github.com/Kurt0913"
             target="_blank"
             rel="noreferrer"
-            className="p-6 bg-gray-800 border border-gray-700 rounded-2xl hover:border-gray-600 transition text-center cursor-pointer"
+            className="p-4 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 transition text-center cursor-pointer"
           >
-            <FaGithub className="text-3xl text-white mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-white mb-2">GitHub</h3>
-            <p className="text-gray-400 text-sm">Check my code</p>
+            <FaGithub className="text-2xl text-white mb-2 mx-auto" />
+            <h3 className="text-base font-semibold text-white mb-1">GitHub</h3>
+            <p className="text-gray-400 text-xs">Check my code</p>
           </a>
 
           {/* LinkedIn Card */}
@@ -64,11 +64,11 @@ const Contact = () => {
             href="https://linkedin.com/in/kurt-tendero"
             target="_blank"
             rel="noreferrer"
-            className="p-6 bg-gray-800 border border-gray-700 rounded-2xl hover:border-gray-600 transition text-center cursor-pointer"
+            className="p-4 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 transition text-center cursor-pointer"
           >
-            <FaLinkedin className="text-3xl text-white mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-white mb-2">LinkedIn</h3>
-            <p className="text-gray-400 text-sm">Connect with me</p>
+            <FaLinkedin className="text-2xl text-white mb-2 mx-auto" />
+            <h3 className="text-base font-semibold text-white mb-1">LinkedIn</h3>
+            <p className="text-gray-400 text-xs">Connect with me</p>
           </a>
 
         </div>
@@ -78,56 +78,56 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gray-900 border border-gray-800 rounded-2xl p-8 max-w-2xl mx-auto"
+          className="bg-gray-900 border border-gray-800 rounded-lg p-6 max-w-md mx-auto"
         >
-          <h3 className="text-2xl font-semibold text-white mb-6">Send me a message</h3>
+          <h3 className="text-lg font-semibold text-white mb-4">Send a message</h3>
           
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3">
             
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
+              <label className="block text-xs font-medium text-gray-300 mb-1">Name</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-600 transition-colors"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+              <label className="block text-xs font-medium text-gray-300 mb-1">Email</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-600 transition-colors"
                 placeholder="your@email.com"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+              <label className="block text-xs font-medium text-gray-300 mb-1">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows="5"
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                rows="4"
+                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-600 transition-colors resize-none"
                 placeholder="Your message here..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition"
+              className="w-full py-2 bg-white text-black font-semibold rounded text-sm hover:bg-gray-100 transition"
             >
-              {submitted ? '✓ Message sent!' : 'Send Message'}
+              {submitted ? '✓ Sent!' : 'Send Message'}
             </button>
 
           </form>

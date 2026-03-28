@@ -5,18 +5,16 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen py-2 text-center overflow-hidden bg-white dark:bg-black transition-colors duration-300">
+    <section className="relative flex flex-col items-center justify-center min-h-[70vh] py-12 text-center overflow-hidden bg-white dark:bg-black transition-colors duration-300 mt-16">
         
         {/* --- BACKGROUND EFFECT START --- */}
         
         {/* 1. The Grid Pattern */}
-        {/* This creates a graph-paper look using pure CSS gradients */}
         <div className="absolute inset-0 z-0 opacity-30 dark:opacity-20 pointer-events-none">
             <div className="absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         </div>
 
         {/* 2. The "Breathing" Glow Blob */}
-        {/* This is a soft ball of light that moves behind your text */}
         <motion.div 
             animate={{ 
                 scale: [1, 1.2, 1],
@@ -41,14 +39,14 @@ const Hero = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                className="w-32 h-32 bg-gray-200 dark:bg-gray-800 rounded-full mb-6 border-4 border-white dark:border-black shadow-lg"
+                className="w-28 h-28 bg-gray-200 dark:bg-gray-800 rounded-full mb-4 border-4 border-white dark:border-black shadow-lg"
             ></motion.div>
             
             <motion.h1 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-5xl md:text-6xl font-bold tracking-tighter text-black dark:text-white mb-4"
+                className="text-5xl md:text-6xl font-bold tracking-tighter text-black dark:text-white mb-2"
             >
               Hi! I'm Kurt Tendero
             </motion.h1>
@@ -57,7 +55,7 @@ const Hero = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-xl leading-relaxed text-gray-600 dark:text-gray-400 max-w-lg mx-auto"
+                className="text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-md mx-auto mb-6"
             >
               A Computer Science Student passionate about building web applications and solving real-world problems.
             </motion.p>
@@ -66,7 +64,7 @@ const Hero = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="mt-8 flex gap-4"
+                className="mt-4 flex gap-4"
             >
               <Link href="#projects">
                 <button className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-lg hover:opacity-80 transition font-medium">

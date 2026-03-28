@@ -4,7 +4,7 @@ import { ThemeProvider } from 'next-themes';
 
 export function Providers({ children }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="portfolio-theme">
       {children}
     </ThemeProvider>
   );
