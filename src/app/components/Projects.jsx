@@ -32,18 +32,11 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold tracking-tight text-black dark:text-white mb-4 flex items-center gap-3"
+          className="text-3xl font-bold tracking-tight text-black dark:text-white mb-12 flex items-center gap-3"
         >
-          <FaFolderOpen className="text-blue-500" /> 
+          <FaFolderOpen className="text-gray-500" /> {/* The Icon */}
           Featured Projects
         </motion.h2>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="h-1 w-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-12"
-        ></motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -53,16 +46,16 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="group relative border rounded-xl p-6 transition-all duration-300 cursor-pointer bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg dark:hover:shadow-blue-500/20"
+              // Card Styling
+              className="group relative border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-gray-400 dark:hover:border-gray-600 transition-colors bg-white dark:bg-gray-900"
             >
               {project.featured && (
-                <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full">
+                <div className="absolute top-4 right-4 px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded">
                   ⭐ Featured
                 </div>
               )}
 
-              <h3 className="text-xl font-semibold text-black dark:text-white mb-2 pr-24">
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-2 pr-20">
                 {project.title}
               </h3>
 

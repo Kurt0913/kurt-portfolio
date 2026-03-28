@@ -29,66 +29,47 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold tracking-tight text-white mb-4 flex items-center gap-3 justify-center"
+          className="text-3xl font-bold tracking-tight text-white mb-12 flex items-center gap-3 justify-center"
         >
-          <FaEnvelope className="text-blue-400" />
+          <FaEnvelope className="text-white" />
           Get In Touch
         </motion.h2>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="h-1 w-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mb-12 mx-auto"
-        ></motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           
           {/* Email Card */}
-          <motion.a
+          <a
             href="mailto:kurttendero@gmail.com"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="p-6 bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-500/30 rounded-2xl hover:border-blue-400/60 transition-all hover:scale-105 cursor-pointer group"
+            className="p-6 bg-gray-800 border border-gray-700 rounded-2xl hover:border-gray-600 transition text-center cursor-pointer"
           >
-            <FaEnvelope className="text-3xl text-blue-400 mb-4 group-hover:scale-110 transition-transform" />
+            <FaEnvelope className="text-3xl text-white mb-4 mx-auto" />
             <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-            <p className="text-gray-300 text-sm group-hover:text-blue-300 transition-colors">kurttendero@gmail.com</p>
-          </motion.a>
+            <p className="text-gray-400 text-sm">kurttendero@gmail.com</p>
+          </a>
 
           {/* GitHub Card */}
-          <motion.a
+          <a
             href="https://github.com/Kurt0913"
             target="_blank"
             rel="noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="p-6 bg-gradient-to-br from-gray-800/40 to-gray-700/20 border border-gray-600/30 rounded-2xl hover:border-gray-400/60 transition-all hover:scale-105 cursor-pointer group"
+            className="p-6 bg-gray-800 border border-gray-700 rounded-2xl hover:border-gray-600 transition text-center cursor-pointer"
           >
-            <FaGithub className="text-3xl text-white mb-4 group-hover:scale-110 transition-transform" />
+            <FaGithub className="text-3xl text-white mb-4 mx-auto" />
             <h3 className="text-xl font-semibold text-white mb-2">GitHub</h3>
-            <p className="text-gray-300 text-sm group-hover:text-white transition-colors">Check my code</p>
-          </motion.a>
+            <p className="text-gray-400 text-sm">Check my code</p>
+          </a>
 
           {/* LinkedIn Card */}
-          <motion.a
+          <a
             href="https://linkedin.com/in/kurt-tendero"
             target="_blank"
             rel="noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="p-6 bg-gradient-to-br from-blue-900/30 to-cyan-800/20 border border-cyan-500/30 rounded-2xl hover:border-cyan-400/60 transition-all hover:scale-105 cursor-pointer group"
+            className="p-6 bg-gray-800 border border-gray-700 rounded-2xl hover:border-gray-600 transition text-center cursor-pointer"
           >
-            <FaLinkedin className="text-3xl text-cyan-400 mb-4 group-hover:scale-110 transition-transform" />
+            <FaLinkedin className="text-3xl text-white mb-4 mx-auto" />
             <h3 className="text-xl font-semibold text-white mb-2">LinkedIn</h3>
-            <p className="text-gray-300 text-sm group-hover:text-cyan-300 transition-colors">Connect with me</p>
-          </motion.a>
+            <p className="text-gray-400 text-sm">Connect with me</p>
+          </a>
 
         </div>
 
@@ -142,14 +123,12 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <button
               type="submit"
-              className="w-full py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all"
+              className="w-full py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition"
             >
               {submitted ? '✓ Message sent!' : 'Send Message'}
-            </motion.button>
+            </button>
 
           </form>
         </motion.div>

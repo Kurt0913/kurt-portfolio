@@ -37,7 +37,7 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full shadow-lg hover:shadow-xl transition-shadow z-40"
+        className="fixed bottom-8 right-8 p-3 bg-black text-white dark:bg-white dark:text-black rounded-full shadow-lg hover:shadow-xl transition-shadow z-40"
         aria-label="Back to top"
       >
         <FaArrowUp size={20} />

@@ -49,20 +49,11 @@ const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold tracking-tight text-center mb-4 text-black dark:text-white flex justify-center items-center gap-3"
+          className="text-3xl font-bold tracking-tight text-center mb-12 text-black dark:text-white flex justify-center items-center gap-3"
         >
-          <FaCode className="text-blue-500" />
+          <FaCode className="text-gray-900 dark:text-white" />
           Tech Stack
         </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-lg mx-auto"
-        >
-          Here are the technologies I've mastered and continue to develop expertise in
-        </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {/* Changed to 2 columns for cleaner look */}
           {skills.map((skillGroup, index) => (
@@ -91,7 +82,7 @@ const Skills = () => {
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                         {item.name}
                       </span>
-                      <span className="text-xs font-semibold text-blue-600 dark:text-blue-400">
+                      <span className="text-xs font-semibold text-gray-600 dark:text-gray-400">
                         {item.proficiency}%
                       </span>
                     </div>
@@ -101,7 +92,7 @@ const Skills = () => {
                         whileInView={{ width: `${item.proficiency}%` }}
                         transition={{ duration: 1.5, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"
+                        className="h-full bg-gray-800 dark:bg-gray-300 rounded-full"
                       />
                     </div>
                   </motion.div>
