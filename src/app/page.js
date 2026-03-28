@@ -5,15 +5,11 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { ThemeToggle } from "./components/ThemeToggle";
 
 export default function Home() {
   return (
-    <main className="bg-white dark:bg-black min-h-screen flex flex-col">
+    <main className="bg-black min-h-screen flex flex-col">
       <Navbar />
-      <div className="fixed top-4 right-6 z-50">
-        <ThemeToggle />
-      </div>
       <Hero />
       <About />
       <Skills />

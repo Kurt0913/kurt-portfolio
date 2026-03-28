@@ -1,25 +1,9 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // For now, just open email client
-    const mailtoLink = `mailto:kurttendero@gmail.com?subject=Message from ${formData.name}&body=${formData.message}`;
-    window.location.href = mailtoLink;
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  };
 
   return (
     <section id="contact" className="py-12 bg-black dark:bg-gray-950 transition-colors duration-300">
@@ -72,66 +56,6 @@ const Contact = () => {
           </a>
 
         </div>
-
-        {/* Contact Form */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-gray-900 border border-gray-800 rounded-lg p-6 max-w-md mx-auto"
-        >
-          <h3 className="text-lg font-semibold text-white mb-4">Send a message</h3>
-          
-          <form onSubmit={handleSubmit} className="space-y-3">
-            
-            <div>
-              <label className="block text-xs font-medium text-gray-300 mb-1">Name</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-600 transition-colors"
-                placeholder="Your name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-medium text-gray-300 mb-1">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-600 transition-colors"
-                placeholder="your@email.com"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-medium text-gray-300 mb-1">Message</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows="4"
-                className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-600 transition-colors resize-none"
-                placeholder="Your message here..."
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-2 bg-white text-black font-semibold rounded text-sm hover:bg-gray-100 transition"
-            >
-              {submitted ? '✓ Sent!' : 'Send Message'}
-            </button>
-
-          </form>
-        </motion.div>
 
       </div>
     </section>
