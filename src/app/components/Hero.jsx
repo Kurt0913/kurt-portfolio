@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -39,8 +40,17 @@ const Hero = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                className="w-28 h-28 bg-gray-200 rounded-full mb-4 border-4 border-white shadow-lg"
-            ></motion.div>
+                className="w-32 h-32 mb-4 border-4 border-white shadow-lg rounded-full overflow-hidden"
+            >
+                <Image 
+                    src="/avatar.jpg" 
+                    alt="Kurt Tendero" 
+                    width={128} 
+                    height={128}
+                    className="w-full h-full object-cover"
+                    priority
+                />
+            </motion.div>
             
             <motion.h1 
                 initial={{ y: 20, opacity: 0 }}
