@@ -12,6 +12,13 @@ const projects = [
     link: "https://autodoc-local.vercel.app",
     github: "https://github.com/Kurt0913/autodoc-local"
   },
+  {
+    title: "Lumina",
+    description: "A minimalist, highly readable programming language featuring a unique \"Light and Optics\" thematic syntax. Designed for clarity and elegance in code expression.",
+    tech: ["Python 3", "Flask", "Vanilla JavaScript", "HTML/CSS"],
+    link: "https://lumina-project-two.vercel.app/",
+    github: "https://github.com/Kurt0913/Lumina_Project"
+  },
 ];
 
 const Projects = () => {
