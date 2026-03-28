@@ -54,7 +54,7 @@ const About = () => {
               <FaGraduationCap className="text-2xl text-gray-700 dark:text-gray-300 mb-4" />
               <h3 className="font-bold text-black dark:text-white mb-1">FEU Institute of Technology</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">BS in Computer Science Specializing in Software Engineering</p>
-              <p className="text-xs text-gray-500 mt-1">2021 - Present</p>
+              <p className="text-xs text-gray-500 mt-1">2023 - Present</p>
             </motion.div>
 
             {/* Card 2: Location */}
