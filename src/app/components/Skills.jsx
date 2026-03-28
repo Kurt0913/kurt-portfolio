@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { FaCode } from "react-icons/fa6";
 
 const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "HTML5"] },
-  { category: "Backend", items: ["Node.js", "Python", "C++", "Java", "MySQL", "Firebase", "SQLite"] },
-  { category: "Tools", items: ["Git", "Github", "VS Code", "Vercel", "Figma"] }
+  { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "TypeScript", "JavaScript"] },
+  { category: "Backend", items: ["Node.js", "Python", "C++", "Java", "PostgreSQL", "Firebase", "Supabase"] },
+  { category: "DevOps & Cloud", items: ["AWS", "Docker", "Kubernetes", "Github Actions"] }
 ];
 
 const Skills = () => {
