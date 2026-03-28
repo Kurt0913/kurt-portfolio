@@ -10,14 +10,16 @@ const projects = [
     description: "A privacy-first documentation generator that runs entirely in the browser. It uses a local LLM (WebLLM) to analyze code and generate READMEs without ever sending data to a cloud server. Features include an interactive file visualization graph, real-time documentation streaming, and a premium \"glassmorphism\" dark mode UI.",
     tech: ["Next.js 14", "WebLLM", "Tailwind CSS", "Framer Motion", "React Flow"],
     link: "https://autodoc-local.vercel.app",
-    github: "https://github.com/Kurt0913/autodoc-local"
+    github: "https://github.com/Kurt0913/autodoc-local",
+    featured: true
   },
   {
     title: "Lumina",
     description: "A minimalist, highly readable programming language featuring a unique \"Light and Optics\" thematic syntax. Designed for clarity and elegance in code expression.",
     tech: ["Python 3", "Flask", "Vanilla JavaScript", "HTML/CSS"],
     link: "https://lumina-project-two.vercel.app/",
-    github: "https://github.com/Kurt0913/Lumina_Project"
+    github: "https://github.com/Kurt0913/Lumina_Project",
+    featured: true
   },
 ];
 
@@ -30,11 +32,18 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold tracking-tight text-black dark:text-white mb-12 flex items-center gap-3"
+          className="text-4xl font-bold tracking-tight text-black dark:text-white mb-4 flex items-center gap-3"
         >
-          <FaFolderOpen className="text-white-600" /> {/* The Icon */}
+          <FaFolderOpen className="text-blue-500" /> 
           Featured Projects
         </motion.h2>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="h-1 w-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-12"
+        ></motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -44,11 +53,16 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              // Card Styling
-              className="group relative border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-gray-400 dark:hover:border-gray-600 transition-colors bg-white dark:bg-gray-900"
+              whileHover={{ y: -8 }}
+              className="group relative border rounded-xl p-6 transition-all duration-300 cursor-pointer bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg dark:hover:shadow-blue-500/20"
             >
+              {project.featured && (
+                <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full">
+                  ⭐ Featured
+                </div>
+              )}
 
-              <h3 className="text-xl font-semibold text-black dark:text-white mb-2">
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-2 pr-24">
                 {project.title}
               </h3>
 

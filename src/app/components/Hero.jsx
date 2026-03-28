@@ -41,14 +41,15 @@ const Hero = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                className="w-32 h-32 bg-gray-200 dark:bg-gray-800 rounded-full mb-6 border-4 border-white dark:border-black shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                className="w-32 h-32 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full mb-6 border-4 border-white dark:border-gray-900 shadow-lg shadow-blue-500/50 dark:shadow-cyan-500/30 cursor-pointer"
             ></motion.div>
             
             <motion.h1 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-5xl md:text-6xl font-bold tracking-tighter text-black dark:text-white mb-4"
+                className="text-6xl md:text-7xl font-black tracking-tighter text-black dark:text-white mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
             >
               Hi! I'm Kurt Tendero
             </motion.h1>
@@ -68,20 +69,30 @@ const Hero = () => {
                 transition={{ delay: 0.4 }}
                 className="mt-8 flex gap-4"
             >
-              <Link href="#projects">
-                <button className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black rounded-lg hover:opacity-80 transition font-medium">
-                  View My Work
-                </button>
-              </Link>
-              
-              <a 
-                href="/resume.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition text-black dark:text-white font-medium"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Download Resume
-              </a>
+                <Link href="#projects">
+                  <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all font-semibold">
+                    View My Work
+                  </button>
+                </Link>
+              </motion.div>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <a 
+                  href="/resume.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="px-8 py-3 border-2 border-blue-500 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all text-white font-semibold"
+                >
+                  Download Resume
+                </a>
+              </motion.div>
             </motion.div>
 
         </div>

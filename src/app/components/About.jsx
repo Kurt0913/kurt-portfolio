@@ -13,11 +13,18 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold tracking-tight text-black dark:text-white mb-12 flex items-center gap-3"
+          className="text-4xl font-bold tracking-tight text-black dark:text-white mb-4 flex items-center gap-3"
         >
-          <FaUser className="text-gray-500" />
-          About 
+          <FaUser className="text-blue-500" />
+          About Me
         </motion.h2>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="h-1 w-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-12"
+        ></motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           
