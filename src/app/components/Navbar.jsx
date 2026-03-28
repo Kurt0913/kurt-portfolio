@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaHome } from "react-icons/fa";
-import { ThemeToggle } from './ThemeToggle';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -76,9 +75,6 @@ const Navbar = () => {
         >
             Resume
         </Link>
-
-        {/* Theme Toggle */}
-        <ThemeToggle />
 
       </div>
     </nav>
